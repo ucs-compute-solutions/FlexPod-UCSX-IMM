@@ -1,0 +1,101 @@
+# This file defines various default values used by server policies 
+# These values typically do not need to changes but can be modified depending on customer deployments
+
+# BIOS policy
+description_of_bios_policy          : "BIOS Policy for Performance optimized ESXi Servers"
+
+# IMC Access Policy
+description_of_imc_access_policy    : "IMC Access Policy for KVM Access"
+
+# KVM Policy
+description_of_kvm_policy           : "KVM Policy to set Tunneled KVM to {{enable_tunneled_kvm}}"
+
+# vMedia Policy
+description_of_vmedia_policy        : "vMedia Policy to enable KVM mounted DVDs"
+
+# FC Boot Order Policy (if required)
+fc_boot_order_policy_description    : "Fibre Channel Boot Order Policy"
+
+#iSCSI Boot Order Policy (if required)
+iscsi_boot_order_policy_description : "iSCSI Boot Order Policy"
+
+# IPMI over LAN Policy 
+description_of_ipmi_policy          : "Enable IPMI over LAN"
+
+# Local User Policy to enable KVM Access 
+description_of_LocalUser_policy      : "Allow Local Users in this policy KVM Access to Servers"
+
+# Ethernet QoS Policy
+description_of_ethernet_qos_policy   : "Ethernet QoS Policy setting MTU to 9000 and priority to Best Effort"
+mtu                                  : 9000
+class_of_service                     : 0
+burst                                : 10240
+priority                             : "Best Effort"
+rate_limit                           : 0
+
+# Ethernet Network Control Policy
+description_of_ethernet_network_control_policy  : "Ethernet Network Control Policy to enable CDP and LLDP"
+
+# Default Ethernet Adapter Policy for VMware
+description_of_ethernet_adapter_vmware_policy  : "Ethernet Adapter Policy for VMware - Platform defaults"
+vmware_number_of_interrupts    : 4
+vmware_receive_queue_count     : 1
+vmware_receive_ring_size       : 512
+vmware_tansmit_queue_count     : 1
+vmware_transmit_ring_size      : 256
+vmware_completion_queue_count  : 2
+vmware_completion_ring_size    : 1
+
+# Ethernet Adapter Policy for High Traffic Interface (Applies to VDS0)
+description_of_ethernet_adapter_policy  : "Ethernet Adapter Policy for High Traffic"
+number_of_interrupts    : 11
+receive_queue_count     : 8
+receive_ring_size       : 512
+tansmit_queue_count     : 1
+transmit_ring_size      : 256
+completion_queue_count  : 9
+completion_ring_size    : 1
+
+# Ethernet Network Group Policy - VLAN details of vNICs assigned to virtual switches for Management and NFS VLANs
+description_of_network_group_policy_for_management  : "VLAN details of vSwitch0 interfaces to allow Mgmt and NFS traffic"
+
+# Ethernet Network Group Policy - VLANs details of vNIC assigned to VDS for  vMotion and traffic VLANs
+description_of_network_group_policy_vds       : "VLAN details of VDS interfaces to allow vMotion and VM traffic"
+
+# Ethernet Network Group Policy - VLAN details of iscsi-a vNIC Interface
+description_of_network_group_policy_for_iscsi_a         : "VLAN details of iscsi-a vNIC Interface; iSCSI-A VLAN {{ allowed_vlans_for_iscsi_a_vnic }} set as Native VLAN"
+
+# Ethernet Network Group Policy - VLAN details of iscsi-b vNIC Interface
+description_of_network_group_policy_for_iscsi_b         : "VLAN details of iscsi-b vNIC Interface; iSCSI-B VLAN {{ allowed_vlans_for_iscsi_b_vnic }} set as Native VLAN"
+
+# iSCSI Adapter Policy
+description_of_iscsi_adapter_policy: "iSCSI Adapter policy"
+
+# iSCSI Target Policies
+description_of_iscsi_a_primary_target_policy    : "iSCSI-A Primary Target Policy"
+description_of_iscsi_a_secondary_target_policy  : "iSCSI-A Secondary Target Policy"
+description_of_iscsi_b_primary_target_policy    : "iSCSI-B Primary Target Policy"
+description_of_iscsi_b_secondary_target_policy  : "iSCSI-B Secondary Target Policy"
+
+# iSCSI Boot Policies
+description_of_iscsi_a_boot_policy              : "iSCSI-A Boot Policy"
+description_of_iscsi_b_boot_policy              : "iSCSI-B Boot Policy"
+
+# LAN Connectivity Policies
+description_of_iscsi_lan_connectivity_policy    : "LAN Connectivity Policy for iSCSI boot from SAN"
+description_of_fc_lan_connectivity_policy       : "LAN Connectivity Policy for FC boot from SAN"
+
+# Fibre Channel Network Policy: SAN-A
+description_of_fc_network_policy_san_a  : "SAN-A Fibre Channel Network Policy using VSAN {{ vsan_id_SAN_A }}"
+
+# Fibre Channel Network Policy: SAN-B
+description_of_fc_network_policy_san_b  : "SAN-B Fibre Channel Network Policy using VSAN {{ vsan_id_SAN_B }}"
+
+# Fibre Channel QoS Policy
+description_of_fc_qos_policy  : "Fibre Channel QoS policy with default values"
+
+# Fibre Channel Adapter Policy
+description_of_fc_adapter_policy    : "Fibre Channel Adapter policy with platform defined default values"
+
+# SAN connectivity Policy
+description_of_san_connectivity_policy  : "SAN Connectivity Policy to add FC HBAs"
