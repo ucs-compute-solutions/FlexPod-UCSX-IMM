@@ -1,0 +1,18 @@
+# June 16th 2022
+# Currently, this file does not need any server entries to be populated.
+# You can execute update_all_inventory.yml playbook to update your server information in this file.
+# However, this server information will be used in future to deploy Server Profiles.
+# In the current release, the playbooks are used to create server profile template from which
+# server profiles are derived manually by the end user
+#
+[Intersight_HX]
+# Note: at least one host (e.g., sjc07-r13-501) must be present for update_*_inventory.yml to work
+sample-entry-do-not-delete
+
+[Intersight_Servers]
+# Note: at least one host (e.g., sjc07-r13-501) must be present for update_*_inventory.yml to work
+sample-entry-do-not-delete
+
+[Intersight:children]
+Intersight_HX
+Intersight_Servers
