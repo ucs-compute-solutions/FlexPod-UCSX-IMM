@@ -12,7 +12,7 @@ The playbooks in this repository perform following functions:
 
 After successfully executing the playbooks, 1 or many server profiles can easily derived and attached to the compute node from Intersight dashboard.
 
-NOTE: The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually.
+NOTE: The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually. The playbooks assume an organization has already been setup under Intersight account as covered in the Cisco Validated Design.
 
 
 # Execution Package Requirement
