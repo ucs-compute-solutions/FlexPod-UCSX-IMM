@@ -1,8 +1,8 @@
 # Cisco Intersight Managed Mode setup using Ansible
 
- This is repository contains Ansible playbooks to configure  Cisco UCS in Intersight Managed Mode (IMM). This repository can be used for setting up UCS in following Cisco Validated Design (CVD): https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmware_7u2.html (with minor changes). For configuring the remaing components of the FlexPod, following repository can be utilized: https://github.com/ucs-compute-solutions/FlexPod-UCSM-M6. In near future, a combined repository will be developed to configure all the components at the same time.
+ This is repository contains Ansible playbooks to configure  Cisco UCS in Intersight Managed Mode (IMM). This repository can be used for setting up UCS in following Cisco Validated Design (CVD): https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmware_7u2.html (with minor changes). For configuring the remaing components of the FlexPod, following repository can be utilized: https://github.com/ucs-compute-solutions/FlexPod-UCSM-M6. In near future, a combined repository will be developed to configure all the components at the same time. This repository does not configure the UCS domain profile or policies associated with the USC domain profile. 
 
-# Intersight Setup Requirement
+# Intersight Configuration
 
 The playbooks in this repository perform following functions:
 
@@ -12,7 +12,9 @@ The playbooks in this repository perform following functions:
 
 After successfully executing the playbooks, 1 or many server profiles can easily derived and attached to the compute node from Intersight dashboard.
 
-NOTE: The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually. The playbooks assume an organization has already been setup under Intersight account as covered in the Cisco Validated Design.
+NOTE: The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually before executing the playbooks. 
+
+NOTE: The playbooks do not create an organization and assume an organization (default or otherwise) has already been setup under Intersight account. The organization name must be updated in group_vars/all.yml(org_name) for successful execuation of the playbooks.
 
 
 # Execution Package Requirement
@@ -35,7 +37,6 @@ https://community.cisco.com/t5/data-center-and-cloud-documents/intersight-api-ov
 
 The API key and Secrets_Filename information is added to the group_vars/all.yml. The default Secrets_File value in all.yml assumes Secrets_File was copied to the same folder/directory where Ansible Playbooks were cloned (alongside inventory file).
 
-
 # Setting up Variables
 
 All the variables used in this framework are defined in the following locations:
@@ -47,7 +48,7 @@ NOTE: All pools and policies created using these playbooks are tagged with user_
 
 # Post Configuration Tasks
 
-Execution of the playbooks in these repositories sets up Server Profile Template. After successfully executing the playbooks, one or more server profiles can easily derived and attached to the compute node from Intersight dashboard. KVM mounted DVD option is available to install OS to these newly derived servers.
+Execution of the playbooks in these repositories set up Server Profile Template. After successfully executing the playbooks, one or more server profiles can easily derived and attached to the compute node from Intersight dashboard. KVM mounted DVD option is available to install OS to these newly derived servers.
 
 
 # Playbook Execution Commands - Summary
