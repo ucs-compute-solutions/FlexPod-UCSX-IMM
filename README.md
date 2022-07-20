@@ -12,9 +12,9 @@ The playbooks in this repository perform following functions:
 
 After successfully executing the playbooks, 1 or many server profiles can easily derived and attached to the compute node from Intersight dashboard.
 
-NOTE: The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually before executing the playbooks. 
+**NOTE:** The addition of UCS to Intersight Account or configuration of Domain Profile to setup UCS is not part of this repository and will have to be performed manually before executing the playbooks. 
 
-NOTE: The playbooks do not create an organization and assume an organization (default or otherwise) has already been setup under Intersight account. The organization name must be updated in group_vars/all.yml(org_name) for successful execuation of the playbooks.
+**NOTE:** The playbooks do not create an organization and assume an organization (default or otherwise) has already been setup under Intersight account. The organization name must be updated in group_vars/all.yml(org_name) for successful execuation of the playbooks.
 
 
 # Execution Package Requirement
@@ -44,7 +44,7 @@ All the variables used in this framework are defined in the following locations:
 1. Variable that require customer inputs are part of group_vars/all.yml
 2. Variable that do not typically require customer input (e.g. descriptions etc.) are present under role_name/defauls/main.yml.
 
-NOTE: All pools and policies created using these playbooks are tagged with user_defined_prefix and "ansible" to easily filter the configuration.
+**NOTE:** All pools and policies created using these playbooks are tagged with user_defined_prefix and "ansible" to easily filter the configuration.
 
 # Post Configuration Tasks
 
