@@ -27,9 +27,8 @@ https://galaxy.ansible.com/cisco/intersight?extIdCarryOver=true&sc_cid=701f20000
 
 You might already have this collection installed. 
 
-To check whether it is installed, run: ansible-galaxy collection list
-
-To install it, use: ansible-galaxy collection install cisco.intersight.
+- To check whether it is installed, run: `ansible-galaxy collection list`
+- To install it, use: `ansible-galaxy collection install cisco.intersight`
 
 # Intersight Access Requirement
 
@@ -55,7 +54,7 @@ Execution of the playbooks in these repositories set up Server Profile Template.
 
 # Playbook Execution Commands - Summary
 
-1. Setup various pools: "ansible-playbook ./create_pools.yml -i inventory"
-2. Setup various policies: "ansible-playbook ./create_server_policies.yml -i inventory"
-3. Setup Server Profile Template(s): "ansible-playbook ./create_server_profile_template.yml -i inventory"
+1. Setup various pools: `ansible-playbook ./create_pools.yml -i inventory`
+2. Setup various policies: `ansible-playbook ./create_server_policies.yml -i inventory`
+3. Setup Server Profile Template(s): `ansible-playbook ./create_server_profile_template.yml -i inventory`
 
