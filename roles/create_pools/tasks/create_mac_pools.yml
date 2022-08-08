@@ -9,7 +9,7 @@
         state: "{{ state | default(omit) }}"
 
       mac_block_fi_a: {
-        "From": "{{ mac_pool_start_on_fi_b }}",
+        "From": "{{ mac_pool_start_on_fi_a }}",
         "Size": "{{ size_of_mac_pool_on_fi_a }}"
        }
 
